@@ -18,12 +18,12 @@
 ### 程式流程
 | 步驟 | 內容 | 附註 |
 | --- | --- | --- |
-| 1-0 | 判斷local是否有存**登入token**，若有則跳登入成功流程*loginSuccessProcess*，若無則等候使用者選擇登入或註冊。 |  |
-| 1-1 | 使用者按下登入或註冊，送出電話號碼*signin_start*，response 409 或 201 代表成功，若成功則要求server重發驗證碼*requestVerifyCode_start*；若失敗則顯示錯誤視窗。 |  |
-| 1-2 | 向server要求驗證碼*requestVerifyCode_start*，response 202 代表成功，若成功則等候使用者輸入驗證碼；若失敗則顯示錯誤視窗。 |  |
-| 1-3 | 使用者送出驗證碼*sendVerifyCode_start*，response 200 代表成功，若成功則進入*loginSuccessProcess*；若失敗則顯示錯誤視窗。 |  |
-| 1-4 | 上述步驟成功則進入*loginSuccessProcess*，結束本頁面並回傳成功訊息。 |  |
-| 2-0 | 直接按下返回鍵，則結束本頁面並回傳無操作訊息。 |  |
+| 1.0 | 判斷local是否有存**登入token**，若有則跳登入成功流程*loginSuccessProcess*，若無則等候使用者選擇登入或註冊。 |  |
+| 1.1 | 使用者按下登入或註冊，送出電話號碼*signin_start*，response 409 或 201 代表成功，若成功則要求server重發驗證碼*requestVerifyCode_start*；若失敗則顯示錯誤視窗。 |  |
+| 1.2 | 向server要求驗證碼*requestVerifyCode_start*，response 202 代表成功，若成功則等候使用者輸入驗證碼；若失敗則顯示錯誤視窗。 |  |
+| 1.3 | 使用者送出驗證碼*sendVerifyCode_start*，response 200 代表成功，若成功則進入*loginSuccessProcess*；若失敗則顯示錯誤視窗。 |  |
+| 1.4 | 上述步驟成功則進入*loginSuccessProcess*，結束本頁面並回傳成功訊息。 |  |
+| 2.0 | 直接按下返回鍵，則結束本頁面並回傳無操作訊息。 |  |
 
 ##
 
